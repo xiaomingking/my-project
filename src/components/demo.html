@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    window.onload=function(){
+      //
+      function fun () {
+        let arr = []
+        let _a =document.getElementsByTagName('a')
+        let leng =  _a.length
+        for(let i =0;i<leng;i++){
+          if(_a[i].href.startsWith("https") && _a[i].href.endsWith("select")){
+            console.log(_a[i].href)
+            arr.push(_a[i].href)
+          }
+        }
+        console.log(arr)
+      }
+      fun()
+      function fnn () {
+        let arr = []
+        let input = document.getElementsByTagName('input')
+        let leng = input.length
+        for(let i=0;i<leng;i++){
+          if(input[i].type==='checkbox'){
+            alert(input[i].type)
+          }
+        }
+      }
+      fnn()
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <a href="http://www.dongdameng.com/components/asdasdsa">董萌</a>
+    <a href="https://www.dongxiaomeng.com/components/select">董小萌</a>
+    <a href="https://www.dongdameng.com/select">董大萌</a>
+    <a href="http://www.dongdameng.com/components/emng">董萌</a>
+  </div>
+  <div>
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="text">
+    <input type="checkbox">
+    <input type="number">
+    <input type="checkbox">
+  </div>
+</body>
+</html>
